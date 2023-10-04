@@ -65,7 +65,9 @@ public class ArvoreBinaria {
         }
     }
 
-
+    public void delete(int informacao){
+        delete(raiz, informacao);
+    }
     public Node delete(Node node, int informacao){
         if(node == null){return null;}
 

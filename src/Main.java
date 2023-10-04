@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        ArvoreAVL tree =  new ArvoreAVL();
+//        ArvoreAVL tree =  new ArvoreAVL();
+        ArvoreBinaria tree = new ArvoreBinaria();
 
         tree.inserir(1);
         tree.inserir(12);
