@@ -9,7 +9,15 @@ public class ArvoreAVL {
 
     private int altura(Node node )
     {
-        return node == null ? -1 : node.altura;
+        if(node == null){
+            return -1;
+        }
+        int esquerda = altura(node.filhoEsquerda);
+        int direita = altura(node.filhoDireita);
+        if(esquerda > direita){
+            return 1 + esquerda;
+        }
+        return 1 + direita;
     }
     private int alturaMaxima(int alturaEsquerda, int alturaDireita)
     {
@@ -46,7 +54,6 @@ public class ArvoreAVL {
 
 
     private Node rotacaoEsquerda(Node raiz){
-
         Node novaRaiz = raiz.filhoEsquerda;
         raiz.filhoEsquerda = novaRaiz.filhoDireita;
         novaRaiz.filhoDireita = raiz;

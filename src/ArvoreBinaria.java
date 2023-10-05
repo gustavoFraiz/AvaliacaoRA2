@@ -46,7 +46,7 @@ public class ArvoreBinaria {
     public void imprimirEmOrdem(Node node) {
         if (node != null) {
             imprimirEmOrdem(node.getFilhoEsquerda());
-            System.out.print(node.getInformação() + " ");
+            System.out.println(node.getInformação() + " ");
             imprimirEmOrdem(node.getFilhoDireita());
         }
     }
